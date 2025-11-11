@@ -1,0 +1,313 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Revamped font setup
+
+  Place your font files in `public/fonts/` (recommended) with names like:
+    - public/fonts/Revamped-Regular.woff2
+    - public/fonts/Revamped-Regular.woff
+
+  If you don't have the files yet, upload them to that folder or replace the src URLs
+  below with a CDN path. The @font-face here uses woff2 then woff as a fallback.
+*/
+@font-face {
+  font-family: 'Revamped';
+  src: url('/fonts/Revamped-Regular.woff2') format('woff2'),
+       url('/fonts/Revamped-Regular.woff') format('woff'),
+       url('/fonts/Revamped.otf') format('opentype'); /* fallback if only OTF is available */
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Reusable striped background for alternating dark bands.
+   Usage: add class `striped-bg` to a section or container.
+   Adjust --stripe-height to control the band height. Colors chosen to match Tailwind gray-900/800.
+*/
+.striped-bg {
+  /* alternating bands using the user's two colors */
+  --stripe-height: 120px;
+  background-color: #212529; /* fallback/base */
+  background-image: repeating-linear-gradient(
+    180deg,
+    #212529 0 var(--stripe-height),
+    #6c757d var(--stripe-height) calc(var(--stripe-height) * 2)
+  );
+  /* ensure the stripes cover the area and are positioned consistently */
+  background-position: center top;
+  background-repeat: repeat;
+}
+
+/* Custom full-width section backgrounds (use these instead of Tailwind classes for exact colors) */
+.bg-section-dark {
+  background-color: #212121; /* dark */
+}
+
+.bg-section-muted {
+  background-color: #373737; /* muted gray */
+}
+
+html, body, #__next {
+  height: 100%;
+}
+body {
+  background-color: #0b0b0b;
+  color: #fff;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* Heading font utility: use class .font-heading or apply to headings globally */
+.font-heading, h1, h2, h3, h4 {
+  font-family: 'Montserrat', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* Hero-specific display font (applied only when using .font-hero) */
+.font-hero {
+  /* Primary display font for hero. Falls back to Montserrat and system fonts. */
+  font-family: 'Revamped', 'Bebas Neue', 'Montserrat', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 0.9;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Improve default link appearance */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Hero heading sizing helper (if you want to tune) */
+.hero-title {
+  /* Extra tuning for the hero heading (tight line-height and bold look) */
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Broken / stenciled text effect for hero titles
+   Creates vertical cut stripes so the text appears 'đứt đứt' revealing the background behind it.
+   Usage: add the `broken-text` class to the element that also uses background-clip:text (we keep the
+   existing .font-hero/text-white setup and apply mask to that element).
+   Tweak --stripe-width and --stripe-gap to control the look. Values in px.
+*/
+.broken-text {
+  display: inline-block;
+  /* Make text filled by a white background so mask removes pieces to reveal the slide underneath */
+  background: linear-gradient(#ffffff, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* show clipped background */
+
+  /* Stripe sizing: adjust to tweak 'broken' appearance */
+  --stripe-width: 14px;
+  --stripe-gap: 14px;
+
+  /* The mask removes stripes (transparent areas) leaving the rest of the letters visible */
+  -webkit-mask-image: repeating-linear-gradient(90deg, rgba(0,0,0,1) 0 var(--stripe-width), rgba(0,0,0,0) var(--stripe-width) calc(var(--stripe-width) + var(--stripe-gap)));
+  mask-image: repeating-linear-gradient(90deg, rgba(0,0,0,1) 0 var(--stripe-width), rgba(0,0,0,0) var(--stripe-width) calc(var(--stripe-width) + var(--stripe-gap)));
+  -webkit-mask-size: auto;
+  mask-size: auto;
+
+  /* Preserve spacing and layout when mask hides parts */
+  /* Allow a stronger shadow for contrast */
+  text-shadow: 0 6px 18px rgba(0,0,0,0.75);
+}
+
+/* Utility: slightly different density for larger screens if you want */
+@media (min-width: 1024px) {
+  .broken-text { --stripe-width: 18px; --stripe-gap: 16px; }
+}
+
+/* Subtle / moderate broken effect: thinner cut stripes and softer edges */
+.broken-subtle {
+  display: inline-block;
+  background: linear-gradient(#ffffff, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Subtle defaults */
+  --stripe-width: 8px;
+  --stripe-gap: 20px;
+
+  /* Soft-edged repeating mask for gentler breaks */
+  -webkit-mask-image: repeating-linear-gradient(90deg,
+    rgba(0,0,0,1) 0 calc(var(--stripe-width) - 1px),
+    rgba(0,0,0,0.6) calc(var(--stripe-width) - 1px) var(--stripe-width),
+    rgba(0,0,0,0) var(--stripe-width) calc(var(--stripe-width) + var(--stripe-gap))
+  );
+  mask-image: repeating-linear-gradient(90deg,
+    rgba(0,0,0,1) 0 calc(var(--stripe-width) - 1px),
+    rgba(0,0,0,0.6) calc(var(--stripe-width) - 1px) var(--stripe-width),
+    rgba(0,0,0,0) var(--stripe-width) calc(var(--stripe-width) + var(--stripe-gap))
+  );
+
+  text-shadow: 0 6px 18px rgba(0,0,0,0.72);
+}
+
+@media (min-width: 1024px) {
+  .broken-subtle { --stripe-width: 10px; --stripe-gap: 22px; }
+}
+
+/* Chunkier broken/stencil that matches the example screenshot more closely.
+   Wider cut stripes and narrower gaps produce the bold rectangular removals.
+*/
+.broken-match {
+  display: inline-block;
+  background: linear-gradient(#ffffff, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Chunky defaults to mimic the screenshot: wider rectangular cuts */
+  --stripe-width: 24px;
+  --stripe-gap: 8px;
+
+  /* Hard-edged mask for strong rectangular cuts */
+  -webkit-mask-image: repeating-linear-gradient(90deg, rgba(0,0,0,1) 0 var(--stripe-width), rgba(0,0,0,0) var(--stripe-width) calc(var(--stripe-width) + var(--stripe-gap)));
+  mask-image: repeating-linear-gradient(90deg, rgba(0,0,0,1) 0 var(--stripe-width), rgba(0,0,0,0) var(--stripe-width) calc(var(--stripe-width) + var(--stripe-gap)));
+
+  /* Deep shadow that helps the white letters read over busy backgrounds */
+  text-shadow: 0 6px 22px rgba(0,0,0,0.75);
+}
+
+@media (min-width: 1024px) {
+  /* Increase stripe width on larger screens for a chunkier stencil look */
+  .broken-match { --stripe-width: 30px; --stripe-gap: 10px; }
+}
+
+/* Show Swiper navigation only when hovering the wrapper (.group) */
+/* Style Swiper navigation as circular buttons and always visible */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 44px;
+  height: 44px;
+  background: rgba(16,16,16,0.5);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: background .15s ease, transform .12s ease, opacity .15s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  opacity: 0; /* hide by default */
+  pointer-events: none;
+  z-index: 45;
+  /* ensure nav is vertically centered by default */
+  top: 50%;
+  transform: translateY(-50%);
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover { transform: translateY(calc(-50% - 2px)); background: rgba(0,0,0,0.7); }
+
+/* Show arrows when the hero wrapper is hovered (desktop) */
+.group:hover .swiper-button-next,
+.group:hover .swiper-button-prev,
+.group.show-nav .swiper-button-next,
+.group.show-nav .swiper-button-prev {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* When the mobile menu is open, hide carousel navigation to avoid overlap */
+.menu-open .swiper-button-next,
+.menu-open .swiper-button-prev {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* also ensure they're visible when focused for keyboard accessibility */
+.swiper-button-next:focus,
+.swiper-button-prev:focus {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* position arrows more inset and ensure arrow color */
+.swiper-button-prev { left: 8px; }
+.swiper-button-next { right: 8px; }
+.swiper-button-next::after,
+.swiper-button-prev::after { color: #fff !important; font-size: 18px !important; }
+
+/* Mobile: always show larger, tappable arrows */
+@media (max-width: 767px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    /* Mobile: visible only when triggered by touch (we still allow show via .show-nav).
+       Make a bit smaller to reduce obstruction on small screens. */
+    opacity: 0; /* start hidden; Hero.js will add .show-nav when touched */
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(16,16,16,0.72);
+    top: 50%;
+    transform: translateY(-50%);
+    /* respect safe-area insets on devices with notches */
+    left: calc(6px + env(safe-area-inset-left));
+    right: calc(6px + env(safe-area-inset-right));
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after { font-size: 20px !important; color: #fff !important; }
+
+/* Strong override: remove any textual pseudo-content (which some other stylesheet
+   or extension might inject) and use a tiny inline SVG chevron so the icon size,
+   color and shape are fully controlled. This avoids large/purple chevrons. */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  /* prevent accidental large text glyphs */
+  content: '' !important;
+  display: inline-block !important;
+  width: 20px !important;
+  height: 20px !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+  line-height: 0 !important;
+  font-size: 0 !important;
+}
+
+/* white chevron svg (next) */
+.swiper-button-next::after {
+  background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpolyline points='9 18 15 12 9 6' stroke='%23ffffff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+/* prev: reuse same svg but flip horizontally */
+.swiper-button-prev::after {
+  background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpolyline points='9 18 15 12 9 6' stroke='%23ffffff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  transform: scaleX(-1);
+}
+  .group.show-nav .swiper-button-next,
+  .group.show-nav .swiper-button-prev {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  .swiper-button-prev { left: calc(8px + env(safe-area-inset-left)); }
+  .swiper-button-next { right: calc(8px + env(safe-area-inset-right)); }
+}
+
+/* Reveal on scroll utilities ------------------------------------------------- */
+.reveal-hidden {
+  opacity: 0;
+  /* slightly larger translate so movement is visible but subtle */
+  transform: translateY(14px) scale(0.995);
+  /* slower fade for a smoother reveal */
+  transition: opacity 900ms cubic-bezier(.2,.8,.2,1), transform 700ms cubic-bezier(.2,.8,.2,1);
+}
+.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-hidden,
+  .reveal-visible {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+

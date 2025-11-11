@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "gallery": "Gallery",
+    "news": "News",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "TRUE INK STUDIO",
+    "subtitle": "Tattoo craft & fine work · Since 2013",
+    "cta": "BOOK AN APPOINTMENT"
+  },
+  "gallery": {
+    "title": "Gallery"
+    ,
+    "recent_heading": "RECENT WORKS",
+    "description": "Our artists always listen to customers' ideas and give advice to create the most beautiful work."
+  },
+  "contact": {
+    "title": "Contact / Book",
+    "phone": "038 709 7651"
+  }
+  ,
+  "introduction": {
+    "title": "Introduction",
+    "heading_prefix": "INTRODUCTION",
+    "brand": "TRUE INK TATTOO",
+    "subtitle": "Where Every Tattoo Tells a Story Worth Keeping",
+    "paragraph": "At TRUE INK TATTOO, we believe tattoos are more than body art — they are personal narratives, emotional milestones, and lifelong reminders of what matters most.",
+    "vision_title": "Vision – Mission – Core Values",
+    "vision_text": "To become Vietnam's leading artistic tattoo studio — a trusted destination for those seeking meaningful, custom tattoos that reflect their inner world.",
+    "mission_title": "Our Mission",
+    "mission_text": "To honor every story through high-quality, safe, and expressive tattoos, while creating a welcoming, creative space where art meets authenticity.",
+    "values_title": "Our Core Values",
+    "values": [
+      "Purposeful art – Each design carries intent and personal character.",
+      "Uncompromising quality – From consultation to aftercare, excellence is our standard.",
+      "Creative freedom – We never copy designs. Your tattoo is uniquely yours.",
+      "Safety & privacy – Client hygiene and comfort are our top priorities.",
+      "Emotional connection – We listen, feel, and translate your story into art."
+    ],
+    "cta": "LEARN MORE",
+    "compact_cta": "See details"
+  }
+  ,
+  "featured": {
+    "title_line1": "FEATURED",
+    "title_line2": "SERVICES",
+    "description": "Our artists listen to your ideas and combine skill with creativity to deliver outstanding tattoos.",
+    "cta": "VIEW SERVICES",
+    "image_title": "TATTOO ART",
+    "image_alt": "tattoo artwork"
+  }
+  ,
+  "achievements": {
+    "title_line1": "ACHIEVEMENTS",
+    "title_line2": "TRUE INK STUDIO",
+    "detail_line1": "1ST PLACE BEST BLACK & GRAY SAIGON",
+    "detail_line2": "INTERNATIONAL 2024",
+    "image1_alt": "award ceremony",
+    "image2_alt": "artist working"
+  }
+  ,
+  "team": {
+    "title_line1": "TEAM",
+    "title_line2": "ARTIST",
+    "description": "Our artists always listen to customers and turn ideas into beautiful tattoos.",
+    "artists": ["MARIA Lam Ngoc", "LIZ", "PAULO VO"]
+  },
+  "testimonials": {
+    "heading": "CLIENT FEEDBACK",
+    "items": [
+      { "quote": "Amazing work — I'm so happy with my tattoo.", "author": "Nguyen Van A" },
+      { "quote": "Professional, clean, and creative artists.", "author": "Tran Thi B" }
+    ]
+  },
+  "footer": {
+    "title": "TRUE INK STUDIO",
+    "address": "89 Nguyễn Cư Trinh, Phường Nguyễn Cư Trinh, Quận 1, Ho Chi Minh City, Vietnam",
+    "copyright": "Copyright©2024 True Ink Studio.",
+    "design_by": "Design by Vina Software (VNS)"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Về chúng tôi",
+    "gallery": "Thư viện",
+    "news": "Tin tức",
+    "contact": "Liên hệ"
+  },
+  "hero": {
+    "title": "TRUE INK STUDIO",
+    "subtitle": "Tinh hoa nghệ thuật xăm · Since 2013",
+    "cta": "LIÊN HỆ ĐẶT LỊCH"
+  },
+  "gallery": {
+    "title": "Thư viện",
+    "recent_heading": "TÁC PHẨM GẦN ĐÂY",
+    "description": "Artist của chúng tôi luôn lắng nghe ý tưởng của khách hàng và đưa ra những lời khuyên tạo nên tác phẩm đẹp nhất."
+  },
+  "contact": {
+    "title": "Liên hệ / Đặt lịch",  
+    "phone": "038 709 7651" 
+  }
+  ,
+  "introduction": {
+    "title": "Giới thiệu",
+    "heading_prefix": "GIỚI THIỆU VỀ",
+    "brand": "XĂM MỰC THẬT",
+    "subtitle": "Nơi mỗi hình xăm kể một câu chuyện đáng lưu giữ",
+    "paragraph": "Tại TRUE INK TATTOO, chúng tôi tin rằng hình xăm không chỉ là nghệ thuật trên cơ thể — chúng là những câu chuyện cá nhân, những cột mốc cảm xúc và lời nhắc nhở suốt đời về những điều quan trọng nhất.",
+    "vision_title": "Tầm nhìn – Sứ mệnh – Giá trị cốt lõi",
+    "vision_text": "Trở thành studio xăm hình nghệ thuật hàng đầu tại Việt Nam — điểm đến đáng tin cậy cho những ai đang tìm kiếm những hình xăm ý nghĩa, tùy chỉnh, phản ánh thế giới nội tâm của họ.",
+    "mission_title": "Sứ mệnh của chúng tôi",
+    "mission_text": "Tôn vinh mọi câu chuyện thông qua những hình xăm chất lượng cao, an toàn và giàu tính biểu cảm, đồng thời tạo ra một không gian sáng tạo và chào đón, nơi nghệ thuật giao thoa với tính xác thực.",
+    "values_title": "Giá trị cốt lõi của chúng tôi",
+    "values": [
+      "Nghệ thuật có mục đích – Mỗi thiết kế đều mang ý định và cá tính riêng.",
+      "Chất lượng không thỏa hiệp – Từ khâu tư vấn đến chăm sóc sau điều trị, sự xuất sắc là tiêu chuẩn của chúng tôi.",
+      "Tự do sáng tạo – Chúng tôi không bao giờ sao chép thiết kế. Hình xăm của bạn là của riêng bạn.",
+      "An toàn & Riêng tư – Vệ sinh và sự thoải mái của khách hàng là ưu tiên hàng đầu của chúng tôi.",
+      "Kết nối cảm xúc – Chúng tôi lắng nghe, cảm nhận và chuyển tải câu chuyện của bạn thành văn bản."
+    ],
+    "cta": "HIỂU THÊM VỀ CHÚNG TÔI",
+    "compact_cta": "Xem chi tiết"
+  }
+  ,
+  "featured": {
+    "title_line1": "DỊCH VỤ",
+    "title_line2": "NỔI BẬT",
+    "description": "Artist của chúng tôi lắng nghe ý tưởng của bạn và kết hợp kỹ thuật cùng sáng tạo để tạo nên những tác phẩm xuất sắc.",
+    "cta": "XEM TẤT CẢ DỊCH VỤ",
+    "image_title": "XĂM HÌNH NGHỆ THUẬT",
+    "image_alt": "tác phẩm xăm"
+  }
+  ,
+  "achievements": {
+    "title_line1": "THÀNH TỰU",
+    "title_line2": "TRUE INK STUDIO",
+    "detail_line1": "GIẢI NHẤT BLACK & GRAY SAIGON",
+    "detail_line2": "INTERNATIONAL 2024",
+    "image1_alt": "lễ trao giải",
+    "image2_alt": "nghệ nhân xăm"
+  }
+  ,
+  "team": {
+    "title_line1": "ĐỘI NGŨ",
+    "title_line2": "ARTIST",
+    "description": "Artist của chúng tôi luôn lắng nghe khách hàng và biến ý tưởng thành những tác phẩm xăm đẹp.",
+    "artists": ["MARIA Lam Ngoc", "LIZ", "PAULO VO"]
+  },
+  "testimonials": {
+    "heading": "CẢM NHẬN CỦA KHÁCH HÀNG",
+    "items": [
+      { "quote": "Tác phẩm tuyệt vời — tôi rất hài lòng.", "author": "Nguyễn Văn A" },
+      { "quote": "Nghệ nhân chuyên nghiệp, sạch sẽ và rất sáng tạo.", "author": "Trần Thị B" }
+    ]
+  },
+  "footer": {
+    "title": "TRUE INK STUDIO",
+    "address": "89 Nguyễn Cư Trinh, Phường Nguyễn Cư Trinh, Quận 1, Thành phố Hồ Chí Minh, Việt Nam",
+    "copyright": "Copyright©2024 True Ink Studio.",
+    "design_by": "Thiết kế bởi Vina Software (VNS)"
+  }
+  ,
+  "about_us": {
+    "heading": "Điều gì làm chúng ta khác biệt",
+    "paragraphs": [
+      "TRUE INK không phải là một tiệm xăm không cần đặt lịch trước. Chúng tôi là một studio được xây dựng dựa trên sự tin tưởng, nghệ thuật và kết nối cá nhân. Mỗi khách hàng chúng tôi làm việc cùng đều mang đến cho chúng tôi một câu chuyện mới — dù đó là về sự chữa lành, sự chuyển hóa, tình yêu, ký ức hay bản sắc — và chúng tôi coi mỗi dự án là một sự hợp tác.",
+      "Từ buổi tư vấn đầu tiên cho đến nét vẽ cuối cùng, nhóm của chúng tôi dành thời gian, tâm huyết và kỹ thuật để đảm bảo mọi tác phẩm đều có ý nghĩa, vượt thời gian và đúng với bạn."
+    ],
+    "services": {
+      "title": "Dịch vụ",
+      "intro": "Tại TRUE INK TATTOO, chúng tôi chuyên xăm hình theo yêu cầu với đủ mọi phong cách — từ tối giản đến phức tạp, từ đen xám đến rực rỡ sắc màu, từ đường nét tinh tế đến hiện thực. Mỗi tác phẩm đều được thiết kế riêng cho bạn, được thiết kế từ đầu và thực hiện với độ chính xác cao.",
+      "items": [
+        {
+          "title": "Thiết kế hình xăm tùy chỉnh",
+          "text": "Chúng tôi bắt đầu với câu chuyện, tầm nhìn hoặc ý tưởng của bạn — sau đó biến nó thành một tác phẩm nghệ thuật độc đáo. Không khuôn mẫu, không lặp lại. 100% nguyên bản."
+        },
+        {
+          "title": "Xăm hình đa phong cách",
+          "text": "Nghệ sĩ của chúng tôi có kinh nghiệm trong nhiều phong cách khác nhau:",
+          "styles": [
+            "Đường nét tinh tế & tối giản",
+            "Chủ nghĩa hiện thực và chân dung",
+            "Phong cách minh họa và phác thảo",
+            "Truyền thống & tân truyền thống",
+            "Blackwork, trang trí, chữ viết và nhiều hơn nữa"
+          ]
+        },
+        {
+          "title": "Trải nghiệm Studio riêng",
+          "text": "Tận hưởng không gian yên tĩnh, sạch sẽ và chuyên nghiệp, nơi mọi thứ đều được đặt lên hàng đầu. Mỗi buổi trị liệu đều được sắp xếp theo lịch hẹn, đảm bảo sự riêng tư và tận tâm."
+        },
+        {
+          "title": "Hướng dẫn chăm sóc sau phẫu thuật",
+          "text": "Chúng tôi không dừng lại ở hình xăm. Bạn sẽ nhận được hướng dẫn chăm sóc sau xăm rõ ràng và hỗ trợ liên tục để đảm bảo hình xăm của bạn lành đẹp và bền lâu trong nhiều năm."
+        }
+      ]
+    }
+  }
+}
